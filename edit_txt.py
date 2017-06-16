@@ -32,17 +32,13 @@ f.close()
 
 
 # READ A FILE IN OTHER FOLDER
-f = open('test_folder/try_c.txt', 'rw+')
+f = open('multiline_file.ini', 'rw+')
 message = f.readlines()
-print(message)
-f.close()
+item = "projectDir"
 
 for each in message:
-    print each
+    if item in each:
+        print each
 
+f.close()
 
-# READ ini FILE
-# f = open('/Users/mac/Library/Preferences/Autodesk/maya/2016/prefs/charcoalEditor.ini', 'r')
-# message = f.read()
-# print(message)
-# f.close()
